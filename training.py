@@ -62,7 +62,7 @@ model.compile(
 model.fit(
   train_ds,
   validation_data=val_ds,
-  epochs=5
+  epochs=11
 )
 
 model.save('model_v12.hdf5')
