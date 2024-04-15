@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.CiocoiuFaggiano.FullscreenContainer"
+    app:layout_insetEdge="none"
+    tools:context=".MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/applicazione"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="@style/Widget.Theme.CiocoiuFaggiano.ButtonBar.Fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="139dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="3"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="@string/inserire_la_reazione"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="151dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/reactionText"
+                        style="@style/Widget.AppCompat.AutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="95dp"
+                        android:layout_span="3"
+                        android:layout_weight="1"
+                        android:allowUndo="false"
+                        android:autofillHints=""
+                        android:hint="@string/inserisci_qui_la_tua_reazione"
+                        android:inputType="text"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/risolviButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:text="@string/bilancia" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/resultText"
+                        android:layout_width="match_parent"
+                        android:layout_height="107dp"
+                        android:layout_span="3"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/menuButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/settingsbutton"
+                        android:tint="#673AB7"
+                        android:translationX="40dp"
+                        android:translationY="33dp"
+                        app:srcCompat="@drawable/_31536_button_512x512" />
+
+                    <ImageButton
+                        android:id="@+id/captureButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="@string/capturebutton"
+                        android:tint="#673AB7"
+                        android:translationX="85dp"
+                        app:srcCompat="@drawable/kisspng_button_computer_icons_camera_photography_photo_camera_5ac83edb19b4e4_3482609615230727311053" />
+
+                    <ImageButton
+                        android:id="@+id/importButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00FFFFFF"
+                        android:contentDescription="@string/importbutton"
+                        android:tint="#673AB7"
+                        android:translationX="110dp"
+                        android:translationY="25dp"
+                        app:srcCompat="@drawable/image" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
